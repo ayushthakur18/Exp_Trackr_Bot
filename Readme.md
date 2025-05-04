@@ -33,7 +33,7 @@ Exp Trackr Bot is a Python-based tool designed to help you track and manage your
 
 1. Run the main script:
     ```bash
-    python mai.py
+    python main.py
     ```
 2. Follow the on-screen instructions to log and manage your expenses.
 
@@ -63,3 +63,7 @@ This project is licensed under the [MIT License](LICENSE).
 ## Contact
 
 For questions or feedback, feel free to reach out at [your-email@example.com](mailto:your-email@example.com).
+
+## Screenshot
+
+![Exp Trackr Bot Screenshot](Exp_Trackr_Bot/img/it_works.png)
