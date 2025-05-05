@@ -14,6 +14,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     environment: production
+    timeout-minutes: 2
 
     steps:
       - name: Checkout code
@@ -44,8 +45,4 @@ jobs:
       - name: Run the bot
         run: | 
           python main.py
-          sleep 100
-
-      - name: Run the bot for 100 seconds
-        run: timeout 100 python main.py
 
