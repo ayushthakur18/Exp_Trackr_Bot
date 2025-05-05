@@ -2,7 +2,7 @@
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Every day at midnight
+    - cron: '0 */5 * * *'  # Every 5 hours
   workflow_dispatch:
 
 env:
@@ -34,4 +34,4 @@ jobs:
       - name: Run the bot
         run: |
           python main.py
-          sleep 300
+          sleep 100
