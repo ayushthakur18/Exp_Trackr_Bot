@@ -13,7 +13,7 @@ load_dotenv()
 logging.basicConfig(level=logging.INFO)
 
 SCOPE = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-CREDS_FILE = os.getenv("FILE")
+CREDS_FILE = os.environ["FILE"]
 SHEET_NAME = "Expense_Tracker"
 
 creds = ServiceAccountCredentials.from_json_keyfile_name(CREDS_FILE, SCOPE)
@@ -21,7 +21,7 @@ client = gspread.authorize(creds)
 sheet = client.open(SHEET_NAME).sheet1
 
 
-BOT_TOKEN = os.getenv("API_KEY")
+BOT_TOKEN = os.environ["API_KEY"]
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Hi! Send me a message like 'spent 200 groceries' or 'added 1000 salary'.")
