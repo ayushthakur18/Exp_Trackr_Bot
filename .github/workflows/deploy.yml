@@ -3,6 +3,7 @@ name: Deploy Bot
 on:
   schedule:
     - cron: '0 */2 * * *'  # Every 2 hours
+  workflow_dispatch:       # Enable manual trigger
 
 env:
   API_KEY: ${{ secrets.API_KEY }}
