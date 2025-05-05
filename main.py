@@ -13,7 +13,13 @@ load_dotenv()
 logging.basicConfig(level=logging.INFO)
 
 SCOPE = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-CREDS_FILE = "model-axle.json"
+CREDS_FILE = os.environ["FILE"]
+print("Credentials file:", CREDS_FILE)
+
+with open(CREDS_FILE, 'r') as file:
+    creds_content = file.read()
+    print("Credentials file content:", creds_content)
+
 SHEET_NAME = "Expense_Tracker"
 
 creds = ServiceAccountCredentials.from_json_keyfile_name(CREDS_FILE, SCOPE)
