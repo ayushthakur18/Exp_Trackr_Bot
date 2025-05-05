@@ -45,3 +45,7 @@ jobs:
         run: | 
           python main.py
           sleep 100
+
+      - name: Run the bot for 100 seconds
+        run: timeout 100 python main.py
+
