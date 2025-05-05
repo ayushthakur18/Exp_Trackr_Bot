@@ -12,7 +12,6 @@ Exp Trackr Bot is a Python-based tool designed to help you track and manage your
 ## Prerequisites
 
 - Python 3.7 or higher
-- Required dependencies listed in `requirements.txt`
 
 ## Installation
 
@@ -28,6 +27,14 @@ Exp Trackr Bot is a Python-based tool designed to help you track and manage your
     ```bash
     pip install -r requirements.txt
     ```
+
+## Environment Secret 
+1. Create a `.env` file
+2. Add the API_KEY and Google Sheet (JSON CRED PATH)
+```
+API_KEY='xyz'
+FILE='/'
+```
 
 ## Usage
 
@@ -62,8 +69,8 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-For questions or feedback, feel free to reach out at [your-email@example.com](mailto:your-email@example.com).
+For questions or feedback, feel free to reach out at [iamayushthakur9@gmail.com](iamayushthakur9@gmail.com).
 
 ## Screenshot
 
-![Exp Trackr Bot Screenshot](Exp_Trackr_Bot/img/it_works.png)
+![Exp Trackr Bot Screenshot](./img/it_works.png)
