@@ -1,8 +1,8 @@
-name: Deploy Bot
+
 
 on:
   schedule:
-    - cron: '0 */5 * * *'  # Every 5 hours
+    - cron: '*/3 * * * *'  # Every 3 minutes
   workflow_dispatch:
 
 env:
