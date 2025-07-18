@@ -15,12 +15,15 @@ jobs:
 
       - name: Set up Git
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "Ayush Thakur"
+          git config --global user.email "iamayushthakur9@gmail.com"
 
       - name: Make and push dummy commit
         run: |
           echo "Automated commit on $(date)" > monthly_commit_log.txt
           git add monthly_commit_log.txt
           git commit -m "Automated monthly commit [skip ci]"
-          git push
+      
+      - name: Push changes
+        run: |
+          git pull && git push origin HEAD:main
