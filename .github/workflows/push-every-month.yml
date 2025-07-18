@@ -1,0 +1,26 @@
+name: Push Commit Every Month
+
+on:
+  schedule:
+    - cron: '0 0 1 * *'  # Runs at 00:00 UTC on the 1st of every month
+  workflow_dispatch:
+
+jobs:
+  monthly_commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Make and push dummy commit
+        run: |
+          echo "Automated commit on $(date)" > monthly_commit_log.txt
+          git add monthly_commit_log.txt
+          git commit -m "Automated monthly commit [skip ci]"
+          git push
